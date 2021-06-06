@@ -1,9 +1,87 @@
-a {
-    cursor: pointer;
+html {
+    font-size: 62.5%;
 }
 
-#main-view {
-    background-image: url("/images/show.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+* {
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin flex($dir, $justify) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin border {
+    border: 1px solid black;
+}
+
+#main {
+    .navbar {
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 15vh;
+        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+        @include flex(row, space-between);
+        .logo {
+            font-size: 4rem;
+            font-family: Roboto;
+        }
+        .menu {
+            @include flex(row, center);
+            li {
+                a {
+                    margin: 0px 5px;
+                    padding: 15px 20px 25px 20px;
+                    font-size: 2rem;
+                    color: black;
+                    font-family: Roboto;
+                    font-weight: 400;
+                    transition: all 0.3s ease-in-out;
+                }
+                a:hover {
+                    border-bottom: 10px solid #ea2027;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    height: 0;
+                    width: 125px;
+                }
+                #join-now-btn {
+                    background: linear-gradient(
+                            to left,
+                            #ea2027 50%,
+                            #231e23 50%
+                        )
+                        right;
+                    background-size: 200%;
+                    transition: 0.5s ease-out;
+                    color: white;
+                }
+                #join-now-btn:hover {
+                    background-position: left;
+                    border: none !important;
+                }
+            }
+        }
+    }
 }
