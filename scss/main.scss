@@ -40,6 +40,9 @@ section {
 }
 
 #main {
+    .bg-image {
+        display: none;
+    }
     .navbar {
         padding: 10px 20px;
         position: fixed;
@@ -152,3 +155,157 @@ section {
 }
 
 /* Media Queries */
+
+@media (max-width: 1070px) {
+    #main {
+        .navbar {
+            .logo {
+                font-size: 3.5rem;
+                span {
+                    font-size: 2.5rem;
+                }
+            }
+            .menu {
+                li {
+                    a {
+                        padding: 10px 15px;
+                        font-size: 1.5rem;
+                    }
+                    a:hover {
+                        border-bottom: 5px solid #ea2027;
+                        border-left: 0px;
+                        border-right: 0px;
+                    }
+                    #join-now-btn {
+                        padding: 20px 20px;
+                    }
+                }
+            }
+        }
+
+        .feature-text {
+            width: 500px;
+            right: 1%;
+            bottom: 10%;
+            h1 {
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    #main {
+        .navbar {
+            .logo {
+                font-size: 3rem;
+                span {
+                    font-size: 2rem;
+                }
+            }
+            .menu {
+                li {
+                    a {
+                        padding: 10px 10px;
+                        font-size: 1.5rem;
+                    }
+                    a:hover {
+                        border-bottom: 5px solid #ea2027;
+                        border-left: 0px;
+                        border-right: 0px;
+                    }
+                    #join-now-btn {
+                        padding: 15px 5px;
+                    }
+                }
+            }
+        }
+
+        .feature-text {
+            width: 450px;
+            bottom: 15%;
+            h1 {
+                font-size: 4.5rem;
+            }
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    #main {
+        .navbar {
+            .logo {
+                font-size: 3rem;
+                span {
+                    font-size: 2rem;
+                }
+            }
+            .menu {
+                padding: 0px;
+                li {
+                    a {
+                        padding: 10px 10px;
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                    }
+                    a:hover {
+                        border-bottom: 5px solid #ea2027;
+                        border-left: 0px;
+                        border-right: 0px;
+                    }
+                    #join-now-btn {
+                        padding: 15px 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    #main {
+        .bg-image {
+            display: block;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -99;
+            }
+        }
+        .navbar {
+            height: auto;
+            .toggle-menu {
+                cursor: pointer;
+                position: absolute;
+                right: 2%;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+            }
+            .menu {
+                display: none;
+            }
+        }
+        #bgvid {
+            display: none;
+        }
+        .feature-text {
+            left: 50%;
+            bottom: 15%;
+            transform: translateX(-50%);
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
