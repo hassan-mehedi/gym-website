@@ -43,6 +43,9 @@ section {
     .bg-image {
         display: none;
     }
+    .menu-bar {
+        display: none;
+    }
     .navbar {
         padding: 10px 20px;
         position: fixed;
@@ -277,6 +280,56 @@ section {
                 top: 0;
                 left: 0;
                 z-index: -99;
+            }
+        }
+
+        .toggle-menu {
+            .close {
+                display: none;
+            }
+        }
+
+        .toggle-menu.active {
+            .close {
+                display: block;
+            }
+            .open {
+                display: none;
+            }
+        }
+
+        .menu-bar {
+            display: none;
+        }
+        .menu-bar.active-menu-bar {
+            display: block;
+            height: auto;
+            width: 45vw;
+            position: fixed;
+            top: 8.3%;
+            right: 0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
+            background-color: rgba($color: #231e23, $alpha: 0.3);
+            .side-menu {
+                margin: 0;
+                padding: 0px;
+                width: 100%;
+                @include flex(column, center);
+                li {
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px 0px;
+                    cursor: pointer;
+                    a {
+                        width: 100%;
+                        font-size: 2rem;
+                        color: #efefef;
+                    }
+                }
+                li:hover {
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
             }
         }
         .navbar {

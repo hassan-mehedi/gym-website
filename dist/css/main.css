@@ -28,6 +28,10 @@ section {
   display: none;
 }
 
+#main .menu-bar {
+  display: none;
+}
+
 #main .navbar {
   padding: 10px 20px;
   position: fixed;
@@ -287,6 +291,62 @@ section {
     top: 0;
     left: 0;
     z-index: -99;
+  }
+  #main .toggle-menu .close {
+    display: none;
+  }
+  #main .toggle-menu.active .close {
+    display: block;
+  }
+  #main .toggle-menu.active .open {
+    display: none;
+  }
+  #main .menu-bar {
+    display: none;
+  }
+  #main .menu-bar.active-menu-bar {
+    display: block;
+    height: auto;
+    width: 45vw;
+    position: fixed;
+    top: 8.3%;
+    right: 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
+    background-color: rgba(35, 30, 35, 0.3);
+  }
+  #main .menu-bar.active-menu-bar .side-menu {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main .menu-bar.active-menu-bar .side-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    cursor: pointer;
+  }
+  #main .menu-bar.active-menu-bar .side-menu li a {
+    width: 100%;
+    font-size: 2rem;
+    color: #efefef;
+  }
+  #main .menu-bar.active-menu-bar .side-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
   }
   #main .navbar {
     height: auto;
