@@ -24,6 +24,7 @@ section {
   height: 100vh;
 }
 
+/* Main Section Design */
 #main .bg-image {
   display: none;
 }
@@ -55,6 +56,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 100;
 }
 
 #main .navbar .logo {
@@ -68,8 +70,12 @@ section {
 }
 
 #main .navbar .logo:hover {
-  color: #ea2027;
+  font-family: Monoton;
   cursor: pointer;
+}
+
+#main .navbar .logo:hover span {
+  font-family: Limelight;
 }
 
 #main .navbar .toggle-menu {
@@ -192,6 +198,7 @@ section {
   color: #efefef;
 }
 
+/* Benefits Section Design */
 #benefits {
   height: auto;
   display: -webkit-box;
@@ -210,8 +217,8 @@ section {
 }
 
 #benefits .container {
-  border: 1px solid black;
-  width: 90%;
+  padding: 5px 0px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,8 +250,79 @@ section {
   width: 40%;
   height: auto;
   margin: 5%;
-  border: 1px solid black;
+  padding: 10px;
+  font-family: Roboto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#benefits .container .text-container h1 {
   font-size: 3rem;
+  font-weight: 900;
+}
+
+#benefits .container .text-container p {
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: 300;
+}
+
+#benefits .container .text-container .arrow-container {
+  width: 50%;
+  padding: 10px 0px;
+  cursor: pointer;
+  background-color: #ea2027;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#benefits .container .text-container .arrow-container a {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 10px;
+}
+
+#benefits .container .text-container .arrow-container i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+#benefits .container .text-container .arrow-container:hover {
+  background-color: #231e23;
+}
+
+#benefits .container .text-container .arrow-container:hover a {
+  color: #fff;
+}
+
+#benefits .container .text-container .arrow-container:hover i {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 /* Media Queries */
@@ -330,6 +408,42 @@ section {
   }
   #main .navbar .menu li #join-now-btn {
     padding: 15px 5px;
+  }
+  #benefits .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #benefits .container .image-container {
+    width: 100%;
+  }
+  #benefits .container .text-container {
+    width: 100%;
+  }
+  #benefits .first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

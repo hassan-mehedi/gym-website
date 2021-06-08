@@ -39,6 +39,8 @@ section {
     border: 1px solid black;
 }
 
+/* Main Section Design */
+
 #main {
     .bg-image {
         display: none;
@@ -56,6 +58,7 @@ section {
         box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
         background-color: rgba($color: #efefef, $alpha: 0.5);
         @include flex(row, space-between);
+        z-index: 100;
         .logo {
             font-size: 4rem;
             font-family: Limelight;
@@ -65,7 +68,10 @@ section {
             }
         }
         .logo:hover {
-            color: #ea2027;
+            font-family: Monoton;
+            span {
+                font-family: Limelight;
+            }
             cursor: pointer;
         }
         .toggle-menu {
@@ -157,12 +163,15 @@ section {
     }
 }
 
+/* Benefits Section Design */
+
 #benefits {
     height: auto;
     @include flex(column, center);
     .container {
-        @include border();
-        width: 90%;
+        padding: 5px 0px;
+
+        width: 100%;
         @include flex(row, center);
         .image-container {
             width: 40%;
@@ -177,8 +186,45 @@ section {
             width: 40%;
             height: auto;
             margin: 5%;
-            @include border();
-            font-size: 3rem;
+            padding: 10px;
+            font-family: Roboto;
+            @include flex(column, center);
+            h1 {
+                font-size: 3rem;
+                font-weight: 900;
+            }
+            p {
+                font-size: 2rem;
+                text-align: justify;
+                font-weight: 300;
+            }
+            .arrow-container {
+                width: 50%;
+                padding: 10px 0px;
+                cursor: pointer;
+                background-color: #ea2027;
+                transition: all 0.5s ease-in-out;
+                @include flex(row, center);
+                a {
+                    font-size: 1.6rem;
+                    color: #fff;
+                    font-weight: 700;
+                    margin: 10px;
+                }
+                i {
+                    color: #fff;
+                    font-size: 2rem;
+                }
+            }
+            .arrow-container:hover {
+                background-color: #231e23;
+                a {
+                    color: #fff;
+                }
+                i {
+                    transform: translateX(10px);
+                }
+            }
         }
     }
 }
@@ -290,6 +336,20 @@ section {
                     }
                 }
             }
+        }
+    }
+    #benefits {
+        .container {
+            @include flex(column, center);
+            .image-container {
+                width: 100%;
+            }
+            .text-container {
+                width: 100%;
+            }
+        }
+        .first {
+            @include flex(column-reverse, center);
         }
     }
 }
