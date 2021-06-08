@@ -52,7 +52,7 @@ section {
         top: 0;
         left: 0;
         right: 0;
-        height: 15vh;
+        height: 13vh;
         box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
         background-color: rgba($color: #efefef, $alpha: 0.5);
         @include flex(row, space-between);
@@ -153,6 +153,32 @@ section {
         a:hover {
             background-position: left;
             color: #efefef;
+        }
+    }
+}
+
+#benefits {
+    height: auto;
+    @include flex(column, center);
+    .container {
+        @include border();
+        width: 90%;
+        @include flex(row, center);
+        .image-container {
+            width: 40%;
+            height: 400px;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .text-container {
+            width: 40%;
+            height: auto;
+            margin: 5%;
+            @include border();
+            font-size: 3rem;
         }
     }
 }
@@ -306,7 +332,7 @@ section {
             height: auto;
             width: 45vw;
             position: fixed;
-            top: 8.3%;
+            top: 10.2vh;
             right: 0;
             border-radius: 5px;
             box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
@@ -333,7 +359,7 @@ section {
             }
         }
         .navbar {
-            height: auto;
+            height: 10vh;
             .toggle-menu {
                 cursor: pointer;
                 position: absolute;
@@ -350,6 +376,7 @@ section {
             display: none;
         }
         .feature-text {
+            width: 90%;
             left: 50%;
             bottom: 15%;
             transform: translateX(-50%);
