@@ -25,19 +25,12 @@ window.addEventListener("scroll", () => {
 
 // Gallery Section: Slide image with it's text content is added
 
-let i = 0;
-const images = [];
-let time = 3000;
-const titleElement = document.querySelector(".imgTitle");
-const quoteElement = document.querySelector(".imgQuote");
-const writterElement = document.querySelector(".imgWritter");
-
 const title = [
     "Train Both Body & Mind",
     "Leave No Stone Unturned",
     "Live Healthy",
     "Your Life Your Rule",
-    "Leave No Stone Unturned",
+    "Do What Is Right",
 ];
 
 const quotes = [
@@ -64,24 +57,3 @@ images[3] = "/images/slide-img-4.jpg";
 images[4] = "/images/slide-img-5.jpg";
 
 // Change Image
-function changeImg() {
-    document.slide.src = images[i];
-    titleElement.innerText = title[i];
-    quoteElement.innerText = quotes[i];
-    writterElement.innerText = writter[i];
-
-    // Check If Index Is Under Max
-    if (i < images.length - 1) {
-        // Add 1 to Index
-        i++;
-    } else {
-        // Reset Back To O
-        i = 0;
-    }
-
-    // Run function every x seconds
-    setTimeout("changeImg()", time);
-}
-
-// Run function when page loads
-window.onload = changeImg;

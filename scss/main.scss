@@ -232,29 +232,146 @@ section {
 /* Gallery Section Design */
 
 #gallery {
-    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.5);
-    .title {
-        font-family: Roboto;
-        text-align: center;
-        padding: 20px 0px;
-        font-size: 4rem;
-        font-weight: 700;
-        word-spacing: 0.5rem;
-    }
-    .container {
+    position: relative;
+    .gallery-container {
         height: 100%;
         width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
         position: relative;
-        .img-container {
-            height: 100%;
-            width: 100%;
+        .first {
+            height: 400px;
+            width: 350px;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-80%, -50%);
             img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
             }
+            .text-container {
+                z-index: 5;
+                position: absolute;
+                width: 40%;
+                left: 5%;
+                top: 40%;
+                color: #fff;
+            }
         }
-        .img-container::after {
+        .second {
+            height: 500px;
+            width: 450px;
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-65%, -50%);
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .text-container {
+                z-index: 5;
+                position: absolute;
+                width: 40%;
+                left: 5%;
+                top: 40%;
+                color: #fff;
+            }
+        }
+        .third {
+            height: 600px;
+            width: 550px;
+            z-index: 3;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .text-container {
+                z-index: 5;
+                position: absolute;
+                width: 50%;
+                left: 5%;
+                top: 30%;
+                color: #fff;
+                h1 {
+                    font-size: 2.5rem;
+                }
+                q {
+                    font-size: 1.5rem;
+                }
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+            #right-btn {
+                position: absolute;
+                cursor: pointer;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -20%);
+                z-index: 5;
+                padding: 30px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+        .fourth {
+            height: 500px;
+            width: 450px;
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            right: 35%;
+            transform: translate(65%, -50%);
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .text-container {
+                z-index: 5;
+                position: absolute;
+                width: 40%;
+                right: 5%;
+                top: 40%;
+                color: #fff;
+            }
+        }
+        .fifth {
+            height: 400px;
+            width: 350px;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            right: 20%;
+            transform: translate(80%, -50%);
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .text-container {
+                z-index: 5;
+                position: absolute;
+                width: 40%;
+                right: 5%;
+                top: 40%;
+                color: #fff;
+            }
+        }
+
+        .card:after {
             content: "";
             position: absolute;
             display: block;
@@ -266,34 +383,59 @@ section {
                 linear-gradient(
                     to bottom,
                     rgba(0, 0, 0, 0) 0px,
-                    rgba(0, 0, 0, 0.9) 100%
+                    rgba(61, 38, 38, 0.7) 100%
                 )
                 repeat 0 0;
-            z-index: 1;
         }
-        .text-container {
-            position: absolute;
-            top: 25%;
-            left: 10%;
-            width: 35%;
-            height: auto;
-            z-index: 99;
-            h1 {
-                font-size: 4rem;
-                color: #fff;
-                font-family: Roboto;
+    }
+}
+
+/* Pricing Section Design */
+
+#pricing {
+    margin: 100px 0px;
+    .feature {
+        @include flex(column, space-evenly);
+        height: 30%;
+        h1 {
+            font-size: 4rem;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        p {
+            margin-top: 0px;
+
+            font-size: 2rem;
+        }
+        .btn {
+            border: 2px solid rgb(8, 134, 236);
+            @include flex(row, center);
+            #month,
+            #year {
+                padding: 15px 20px;
+                font-size: 2rem;
+                cursor: pointer;
             }
-            q {
-                font-size: 2.5rem;
+            #month {
+                background-color: rgb(8, 134, 236);
                 color: #fff;
-                font-family: sans-serif;
             }
-            h3 {
-                text-align: right;
-                font-size: 2.5rem;
-                color: #fff;
-                font-family: Roboto;
+            #year {
+                background-color: #fff;
+                color: #231e23;
             }
+        }
+    }
+    .card-container {
+        width: 100%;
+        height: 70%;
+        padding-top: 50px;
+        @include flex(row, space-evenly);
+        .card {
+            @include border(brown);
+            width: 23%;
+            height: 100%;
+            border-radius: 10px;
         }
     }
 }
