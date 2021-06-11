@@ -49,11 +49,68 @@ const writter = [
     "— Thomas Jefferson",
 ];
 
-// Image List
+const images = [];
+
 images[0] = "/images/slide-img-1.jpg";
 images[1] = "/images/slide-img-2.jpg";
 images[2] = "/images/slide-img-3.jpg";
 images[3] = "/images/slide-img-4.jpg";
 images[4] = "/images/slide-img-5.jpg";
 
-// Change Image
+const first = document.slide_one;
+const second = document.slide_two;
+const third = document.slide_third;
+const fourth = document.slide_fourth;
+const fifth = document.slide_fifth;
+
+const header_title = document.getElementsByClassName("title");
+const quote = document.getElementsByClassName("quote");
+const quote_writter = document.getElementsByClassName("writter");
+
+const right_button = document.getElementById("right-arrow-btn");
+
+let counter = 1;
+
+right_button.addEventListener("click", () => {
+    if (counter > 4) {
+        counter = 1;
+    }
+
+    first.src = images[counter >= 5 ? counter - 5 : counter];
+    second.src = images[counter + 1 >= 5 ? counter + 1 - 5 : counter + 1];
+    third.src = images[counter + 2 >= 5 ? counter + 2 - 5 : counter + 2];
+    fourth.src = images[counter + 3 >= 5 ? counter + 3 - 5 : counter + 3];
+    fifth.src = images[counter + 4 >= 5 ? counter + 4 - 5 : counter + 4];
+
+    header_title[0].innerText = title[counter >= 5 ? counter - 5 : counter];
+    header_title[1].innerText =
+        title[counter + 1 >= 5 ? counter + 1 - 5 : counter + 1];
+    header_title[2].innerText =
+        title[counter + 2 >= 5 ? counter + 2 - 5 : counter + 2];
+    header_title[3].innerText =
+        title[counter + 3 >= 5 ? counter + 3 - 5 : counter + 3];
+    header_title[4].innerText =
+        title[counter + 4 >= 5 ? counter + 4 - 5 : counter + 4];
+
+    quote[0].innerText = quotes[counter >= 5 ? counter - 5 : counter];
+    quote[1].innerText =
+        quotes[counter + 1 >= 5 ? counter + 1 - 5 : counter + 1];
+    quote[2].innerText =
+        quotes[counter + 2 >= 5 ? counter + 2 - 5 : counter + 2];
+    quote[3].innerText =
+        quotes[counter + 3 >= 5 ? counter + 3 - 5 : counter + 3];
+    quote[4].innerText =
+        quotes[counter + 4 >= 5 ? counter + 4 - 5 : counter + 4];
+
+    quote_writter[0].innerText = writter[counter >= 5 ? counter - 5 : counter];
+    quote_writter[1].innerText =
+        writter[counter + 1 >= 5 ? counter + 1 - 5 : counter + 1];
+    quote_writter[2].innerText =
+        writter[counter + 2 >= 5 ? counter + 2 - 5 : counter + 2];
+    quote_writter[3].innerText =
+        writter[counter + 3 >= 5 ? counter + 3 - 5 : counter + 3];
+    quote_writter[4].innerText =
+        writter[counter + 4 >= 5 ? counter + 4 - 5 : counter + 4];
+
+    counter++;
+});

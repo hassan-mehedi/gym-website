@@ -436,7 +436,7 @@ section {
   font-size: 2rem;
 }
 
-#gallery .gallery-container .third #right-btn {
+#gallery .gallery-container .third #right-arrow-btn {
   position: absolute;
   cursor: pointer;
   top: 80%;
@@ -448,6 +448,12 @@ section {
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#gallery .gallery-container .third #right-arrow-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #gallery .gallery-container .fourth {
@@ -502,6 +508,11 @@ section {
   right: 5%;
   top: 40%;
   color: #fff;
+}
+
+#gallery .gallery-container .card {
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
 }
 
 #gallery .gallery-container .card:after {
