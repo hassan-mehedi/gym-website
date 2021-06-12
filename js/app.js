@@ -20,7 +20,6 @@ window.addEventListener("scroll", () => {
     if (y <= 30) {
         navBar.style.backgroundColor = "rgba(239,239,239, 0.5)";
     }
-    console.log(y);
 });
 
 // Gallery Section: Slide image with it's text content is added
