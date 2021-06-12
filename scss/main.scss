@@ -520,6 +520,34 @@ section {
     }
 }
 
+#contact {
+    padding: 20px 50px;
+    height: auto;
+    @include flex(row, center);
+    .location {
+        @include border();
+        padding: 0px 10px;
+        width: 40%;
+        margin: 0px 20px;
+    }
+    .contact-form-container {
+        @include border();
+        width: 40%;
+        @include flex(column, center);
+        @include border();
+        .title {
+            @include border();
+        }
+        .message {
+            @include border();
+        }
+        form {
+            width: 100%;
+            @include flex(column, center);
+        }
+    }
+}
+
 /* Media Queries */
 
 @media (max-width: 1070px) {
