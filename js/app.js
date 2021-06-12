@@ -113,3 +113,51 @@ right_button.addEventListener("click", () => {
 
     counter++;
 });
+
+// Pricing Section --> Month <=> Year
+
+const month_button = document.getElementById("month");
+const year_button = document.getElementById("year");
+const type = document.getElementsByClassName("type");
+const price = document.getElementsByClassName("price");
+
+let flag = false;
+
+year_button.addEventListener("click", () => {
+    if (flag === false) {
+        year_button.style.backgroundColor = "#ea2027";
+        year_button.style.color = "#fff";
+        month_button.style.backgroundColor = "#fff";
+        month_button.style.color = "#231e23";
+
+        for (let i = 0; i < type.length; i++) {
+            type[i].innerText = "/year";
+            price[i].innerText =
+                "$" +
+                eval(
+                    `${price[i].innerText.substring(1, price[i].length)} * 12`
+                );
+        }
+        flag = true;
+    }
+});
+
+month_button.addEventListener("click", () => {
+    if (flag === true) {
+        month_button.style.backgroundColor = "#ea2027";
+        month_button.style.color = "#fff";
+        year_button.style.backgroundColor = "#fff";
+        year_button.style.color = "#231e23";
+
+        for (let i = 0; i < type.length; i++) {
+            type[i].innerText = "/month";
+            price[i].innerText =
+                "$" +
+                eval(
+                    `${price[i].innerText.substring(1, price[i].length)} / 12`
+                );
+        }
+
+        flag = false;
+    }
+});

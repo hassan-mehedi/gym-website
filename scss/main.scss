@@ -234,6 +234,9 @@ section {
 #gallery {
     position: relative;
     .gallery-container {
+        .gallery-title {
+            display: none;
+        }
         height: 100%;
         width: 100%;
         overflow: hidden;
@@ -504,7 +507,7 @@ section {
                     align-items: center;
                     justify-content: center;
                     height: 100%;
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     background-color: #ea2027;
                     color: #fff;
                     transition: all 0.5s ease-in-out;
@@ -581,6 +584,22 @@ section {
     }
 }
 
+@media (max-width: 960px) {
+    #pricing {
+        .card-container {
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .card {
+                width: 400px;
+                height: 500px;
+                margin: 20px 0px;
+            }
+        }
+    }
+}
+
 @media (max-width: 860px) {
     #main {
         .navbar {
@@ -635,6 +654,15 @@ section {
             }
             .fifth {
                 height: 300px;
+            }
+        }
+    }
+    #pricing {
+        .card-container {
+            .card {
+                width: 350px;
+                height: 450px;
+                margin: 20px 0px;
             }
         }
     }
@@ -723,6 +751,15 @@ section {
                         font-size: 0.8rem;
                     }
                 }
+            }
+        }
+    }
+    #pricing {
+        .card-container {
+            .card {
+                width: 300px;
+                height: 400px;
+                margin: 20px 0px;
             }
         }
     }
@@ -823,6 +860,27 @@ section {
             }
         }
     }
+    #pricing {
+        .card-container {
+            .card {
+                width: 250px;
+                height: 350px;
+                margin: 20px 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #pricing {
+        .card-container {
+            .card {
+                width: 250px;
+                height: 350px;
+                margin: 10px 0px;
+            }
+        }
+    }
 }
 
 @media (max-width: 550px) {
@@ -845,21 +903,54 @@ section {
             }
         }
     }
+    #pricing {
+        .card-container {
+            padding: 10px;
+            .card {
+                width: 100%;
+                height: 450px;
+                margin: 10px 0px;
+            }
+        }
+    }
 }
 
 @media (max-width: 450px) {
     #gallery {
-        .container {
-            .text-container {
-                h1 {
-                    font-size: 2rem;
+        .gallery-container {
+            .gallery-title {
+                position: absolute;
+                left: 50%;
+                top: 10%;
+                transform: translate(-50%, -80%);
+                display: block;
+                font-weight: bold;
+                font-size: 3rem;
+            }
+            .second {
+                display: none;
+            }
+            .third {
+                width: 100%;
+                .text-container {
+                    width: 80%;
+                    @include flex(column, center);
                 }
-                q {
-                    font-size: 1.8rem;
-                }
-                h3 {
-                    font-size: 1.8rem;
-                }
+            }
+            .fourth {
+                display: none;
+            }
+        }
+    }
+    #pricing {
+        .feature {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.8rem;
+                font-weight: 500;
+                text-align: center;
             }
         }
     }
