@@ -549,6 +549,7 @@ section {
 }
 
 #pricing .feature h1 {
+  font-family: Roboto;
   font-size: 4rem;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -560,7 +561,7 @@ section {
 }
 
 #pricing .feature .btn {
-  border: 2px solid #0886ec;
+  border: 2px solid #ea2027;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,13 +579,13 @@ section {
 
 #pricing .feature .btn #month,
 #pricing .feature .btn #year {
-  padding: 15px 20px;
+  padding: 10px 20px;
   font-size: 2rem;
   cursor: pointer;
 }
 
 #pricing .feature .btn #month {
-  background-color: #0886ec;
+  background-color: #ea2027;
   color: #fff;
 }
 
@@ -613,10 +614,127 @@ section {
 }
 
 #pricing .card-container .card {
-  border: 1px solid brown;
   width: 23%;
   height: 100%;
   border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #ea2027;
+}
+
+#pricing .card-container .card h2 {
+  height: 10%;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+  padding: 0px 5px;
+}
+
+#pricing .card-container .card h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15%;
+  margin: 0px;
+  padding: 0px 5px;
+}
+
+#pricing .card-container .card h1 .price {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+#pricing .card-container .card h1 .type {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#pricing .card-container .card ul {
+  height: 60%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#pricing .card-container .card ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2px 0px;
+  height: 15%;
+}
+
+#pricing .card-container .card ul li .icon {
+  border: none;
+  width: 10%;
+  height: 80%;
+  background-color: #ea2027;
+  border-radius: 100%;
+}
+
+#pricing .card-container .card ul li .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+#pricing .card-container .card ul li .list-item {
+  font-family: sans-serif;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+#pricing .card-container .card .subs-btn {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+#pricing .card-container .card .subs-btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  font-size: 2.5rem;
+  background-color: #ea2027;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#pricing .card-container .card .subs-btn a:hover {
+  background-color: #231e23;
 }
 
 /* Media Queries */
