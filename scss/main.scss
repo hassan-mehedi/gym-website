@@ -402,7 +402,6 @@ section {
 /* Pricing Section Design */
 
 #pricing {
-    margin: 100px 0px;
     .feature {
         @include flex(column, space-evenly);
         height: 30%;
@@ -521,31 +520,139 @@ section {
 }
 
 #contact {
-    padding: 20px 50px;
+    margin: 50px 0px 100px 0px;
+    position: relative;
+    padding: 20px 50px 0px 50px;
     height: auto;
-    @include flex(row, center);
-    .location {
-        @include border();
-        padding: 0px 10px;
-        width: 40%;
-        margin: 0px 20px;
+    @include flex(column, center);
+    .contact-header {
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 4rem;
     }
-    .contact-form-container {
-        @include border();
-        width: 40%;
-        @include flex(column, center);
-        @include border();
-        .title {
-            @include border();
+    .contact-container {
+        margin: 50px 0px;
+        @include flex(row, center, center);
+        .location {
+            padding: 0px 30px;
+            width: 35%;
+            margin: 0px 40px;
+            font-family: sans-serif;
+            border-right: 2px solid #ea2027;
+            .title {
+                font-size: 3rem;
+            }
+            .address {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            #direction-btn {
+                cursor: pointer;
+                font-size: 1.5rem;
+                letter-spacing: 0.2rem;
+                padding: 10px 20px;
+                background-color: #ea2027;
+                border: none;
+                color: #fff;
+                border-radius: 10px;
+                margin: 20px 0px;
+            }
+            #direction-btn:hover {
+                background-color: #231e23;
+                transition: all 0.3s ease-in-out;
+            }
+            .number {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            .our-email {
+                font-size: 2rem;
+                font-weight: 600;
+            }
         }
-        .message {
-            @include border();
-        }
-        form {
-            width: 100%;
-            @include flex(column, center);
+        .contact-form-container {
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            .title {
+                font-family: Roboto;
+                font-size: 3rem;
+                font-weight: 900;
+            }
+            .message {
+                font-family: sans-serif;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                label {
+                    margin: 5px 0px;
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+                input {
+                    padding: 15px;
+                    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                    outline: none;
+                }
+                input::placeholder,
+                textarea::placeholder {
+                    opacity: 0.85;
+                    letter-spacing: 0.1rem;
+                }
+                input:focus,
+                textarea:focus {
+                    box-shadow: 0px 0px 2px 2px
+                        rgba($color: #ea2027, $alpha: 0.75);
+                    transition: all 0.1s ease;
+                }
+                textarea {
+                    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+                    background-color: transparent;
+                    border: none;
+                    padding: 15px;
+                    border-radius: 10px;
+                    outline: none;
+                }
+                .send {
+                    width: 100%;
+                    margin-top: 25px;
+                    @include flex(column, center);
+                    #submit-btn {
+                        font-size: 2rem;
+                        padding: 15px 20px;
+                        background-color: #ea2027;
+                        color: #fff;
+                        border-radius: 10px;
+                    }
+                    #submit-btn:hover {
+                        background-color: #231e23;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
         }
     }
+}
+
+#footer {
+    height: 100px;
+    @include border();
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    background-color: #ea2027;
 }
 
 /* Media Queries */
@@ -614,6 +721,7 @@ section {
 
 @media (max-width: 960px) {
     #pricing {
+        height: auto;
         .card-container {
             height: auto;
             display: flex;
@@ -623,6 +731,18 @@ section {
                 width: 400px;
                 height: 500px;
                 margin: 20px 0px;
+            }
+        }
+    }
+
+    #contact {
+        .contact-container {
+            .location {
+                width: 40%;
+                margin-right: 10%;
+            }
+            .contact-form-container {
+                width: 50%;
             }
         }
     }
@@ -791,6 +911,18 @@ section {
             }
         }
     }
+    #contact {
+        .contact-container {
+            .location {
+                width: 40%;
+                margin-right: 5%;
+                margin-left: 0px;
+            }
+            .contact-form-container {
+                width: 60%;
+            }
+        }
+    }
 }
 
 @media (max-width: 670px) {
@@ -897,6 +1029,21 @@ section {
             }
         }
     }
+    #contact {
+        .contact-container {
+            @include flex(column, center, center);
+            .location {
+                width: 100%;
+                margin: 0px;
+                border: none;
+                border-bottom: 2px solid #ea2027;
+            }
+            .contact-form-container {
+                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -935,7 +1082,7 @@ section {
         .card-container {
             padding: 10px;
             .card {
-                width: 100%;
+                width: 80%;
                 height: 450px;
                 margin: 10px 0px;
             }
@@ -970,6 +1117,9 @@ section {
             }
         }
     }
+}
+
+@media (max-width: 350px) {
     #pricing {
         .feature {
             h1 {
