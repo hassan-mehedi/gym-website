@@ -10,6 +10,11 @@ html {
           box-sizing: border-box;
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -738,7 +743,7 @@ section {
 }
 
 #contact {
-  margin: 50px 0px 100px 0px;
+  margin: 50px 0px 0px 0px;
   position: relative;
   padding: 20px 50px 0px 50px;
   height: auto;
@@ -955,13 +960,85 @@ section {
 }
 
 #footer {
-  height: 100px;
-  border: 1px solid black;
-  position: fixed;
-  left: 0%;
-  bottom: 0%;
+  height: 80px;
   width: 100%;
+  padding: 0px 10px;
   background-color: #ea2027;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .rights {
+  font-size: 2rem;
+  color: #fff;
+}
+
+#footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 40%;
+}
+
+#footer .social .img-container {
+  height: 100%;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .social .img-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .social .img-container img {
+  height: 50%;
+  width: 50%;
 }
 
 /* Media Queries */
@@ -1202,6 +1279,9 @@ section {
   #contact .contact-container .contact-form-container {
     width: 60%;
   }
+  #footer .social .img-container {
+    width: 20%;
+  }
 }
 
 @media (max-width: 670px) {
@@ -1311,6 +1391,9 @@ section {
     height: 350px;
     margin: 20px 0px;
   }
+  #contact .contact-header {
+    border-bottom: 2px solid #ea2027;
+  }
   #contact .contact-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1332,10 +1415,51 @@ section {
     border: none;
     border-bottom: 2px solid #ea2027;
   }
+  #contact .contact-container .location .title {
+    font-size: 2.5rem;
+  }
   #contact .contact-container .contact-form-container {
     -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
             box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     width: 100%;
+  }
+  #footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer .rights {
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.5rem;
+  }
+  #footer .social {
+    height: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
